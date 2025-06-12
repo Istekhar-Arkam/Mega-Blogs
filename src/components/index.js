@@ -1,7 +1,3 @@
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-
-
-export {
-    Footer,Header
-}
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+export { Footer, Header };
