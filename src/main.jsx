@@ -1,5 +1,4 @@
 import { StrictMode } from "react";
-import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -11,7 +10,7 @@ import { AuthLayout, Login } from "./components/index.js";
 import AddPost from "./pages/AddPost";
 import Signup from "./pages/Signup";
 import Post from "./pages/Post";
-import AllPosts from "./pages/AllPosts";
+import AllPosts from "./Pages/AllPosts.jsx";
 import EditPost from "./pages/EditPost.jsx";
 const router = createBrowserRouter([
   {
@@ -72,10 +71,11 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <StrictMode>
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
-  </React.StrictMode>
+  </StrictMode>
 );

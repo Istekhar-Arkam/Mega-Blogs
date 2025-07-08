@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import authService from "./appWrite/auth";
 import { login, logout } from "./store/authSlice";
 import { Footer, Header } from "./components";
+import { Outlet } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
@@ -25,7 +26,9 @@ function App() {
     <div className="min-h-screen bg-gray-500">
       <div className="block w-full">
         <Header />
-        <main>todo{/* <Outlet /> */}</main>
+        <main>
+          TODO: <Outlet />
+          </main>
         <Footer />
       </div>
     </div>
